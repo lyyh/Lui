@@ -1,0 +1,13 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+*.iml
+*.idea/
+
+# 忽略文件
+
+node_modules/
+
+.DS_Store
