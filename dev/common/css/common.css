@@ -1,5 +1,10 @@
-.wrap{
-	margin: 0 auto;
-	width: 1000px;
-	height: 500px;
+.wrap
+{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
 }
+.Lui-container{
+	padding: 50px;
+}
+/*以上为公共样式不可修改*/

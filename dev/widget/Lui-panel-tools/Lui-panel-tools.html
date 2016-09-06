@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<title>组合面板</title>
+	<link rel="stylesheet" type="text/css" href="../../common/css/reset.css">
+	<!-- common.css 用于用户展示 -->
+	<link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+
+	<script type="text/javascript" src='../../common/lib/js/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript" src='../code/common/common.js'></script>
+	<!-- 以上为固定形式，不可更改 -->
+	
+	<link rel="stylesheet" type="text/css" href="../Lui-panel/Lui-panel.css">
+	<link rel="stylesheet" type="text/css" href="./Lui-panel-tools.css">
+</head>
+<body>
+    <div class="wrap">
+		<!-- 公共头部 -->
+		<div class='head'>
+			<h1 style="font-size:50px">面板</h1><hr>
+		</div>
+		<div class="Lui-container">
+			<!-- 以下为自定义组件 -->
+			<!-- 基础面板 -->
+			<div id = 'p' class="Lui-panel" title='基础面板' style="width: 500px;height: 200px;">
+				<p style="font-size: 18px;" class='Lui-panel-head'
+					data-option = "iconCls:'fa fa-save'"
+				>
+					<span>我是一个基础面板</span>
+				</p>
+				<div class='Lui-panel-body'>
+					<ul>
+						<li>基础面板</li>
+						<li>基础面板</li>
+						<li>基础面板</li>
+						<li>基础面板</li>
+						<li>基础面板</li>
+						<li>基础面板</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
