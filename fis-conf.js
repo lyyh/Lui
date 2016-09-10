@@ -9,13 +9,13 @@ fis.match(/\/dev\/(.*)/i, {
 });
 
 /*模块化加载器配置*/
-fis.match('::package', {
-  postpackager: fis.plugin('loader', {
-    // allInOne: true, //js&css打包成一个文件
-    sourceMap: true, //是否生成依赖map文件
-    useInlineMap: true //是否将sourcemap作为内嵌脚本输出
-  })
-});
+// fis.match('::package', {
+//   postpackager: fis.plugin('loader', {
+//     // allInOne: true, //js&css打包成一个文件
+//     sourceMap: true, //是否生成依赖map文件
+//     useInlineMap: true //是否将sourcemap作为内嵌脚本输出
+//   })
+// });
 
 /*指定模块化插件*/
 // fis.hook('amd', {
@@ -67,10 +67,10 @@ fis.match('::package', {
 
 
 /*自动给 css 属性添加前缀，让标准的 css3 支持更多的浏览器.*/
-fis.match('*.{css,less,scss}', {
-  preprocessor: fis.plugin('autoprefixer', {
-    "browsers": ["Android >= 2.1", "iOS >= 4", "ie >= 8", "firefox >= 15"],
-    "cascade": true
-  })
-})
+// fis.match('*.{css,less,scss}', {
+//   preprocessor: fis.plugin('autoprefixer', {
+//     "browsers": ["Android >= 2.1", "iOS >= 4", "ie >= 8", "firefox >= 15"],
+//     "cascade": true
+//   })
+// })
 

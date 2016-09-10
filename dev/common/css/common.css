@@ -1,11 +1,10 @@
+@import './reset.css';
+@import '../lib/bootstrap/css/bootstrap.min.css';
+@import '../lib/bootstrap/css/font-awesome.min.css';
 .wrap
 {
     width: 1000px;
     height: 500px;
     margin: 0 auto;
-    opacity: 0;
-}
-.Lui-container{
-	padding: 50px;
 }
 /*以上为公共样式不可修改*/
