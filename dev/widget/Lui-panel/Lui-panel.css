@@ -1,12 +1,12 @@
-.Lui-panel{
+.lui-panel{
 	display: inline-block;
 	border: 1px solid #9bbff7;
 	box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.15);
 }
-.Lui-panel .Lui-panel-head{
+.lui-panel .lui-panel-head{
 	background-color: #E0ECFF;
 	padding: 10px 0;
 }
-.Lui-panel .Lui-panel-body{
+.lui-panel .lui-panel-body{
 	padding: 10px;
 }

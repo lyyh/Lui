@@ -3,6 +3,7 @@
     width: 1000px;
     height: 500px;
     margin: 0 auto;
+    opacity: 0;
 }
 .Lui-container{
 	padding: 50px;

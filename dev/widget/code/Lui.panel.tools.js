@@ -1,3 +1,4 @@
+
 /*!
  * =======================================================
  * 插件信息
@@ -18,6 +19,98 @@
  *   注释
  * =======================================================
  */
-;(function($,window,document,undefined){
+;(function($, window, document, undefined) {
+	/**
+	 * 插件名称
+	 * 默认参数定义
+	 * @type {{a: number}}
+	 */
+	var pluginName = 'panelTool',
+		defaults = {
+			callback: {
+				close: null,
+				refresh: null
+			}
+		};
 
-})(jQuery,window,document);
+	/**
+	 * 插件构造函数
+	 *
+	 * @param element
+	 * @param options
+	 * @constructor
+	 */
+	function PanelTools(element, options) {
+		this.element = $(element);
+		this.setting = $.extend(true, {}, defaults, options);
+		this._defaults = defaults;
+		this._name = pluginName;
+		this.init();
+	}
+
+	/**
+	 * 绑定默认事件
+	 */
+	function _bindEvents(panel_tool) {
+		//隐藏面板
+		panel_tool.element.on('click', '.x-panel-close', function() {});
+
+		/**
+		 * 刷新操作
+		 */
+		panel_tool.element.on('click', '.x-panel-refresh', function() {});
+
+		//面板收缩事件
+		panel_tool.element.on('click', '.x-panel-shrink', function() {
+
+		});
+	}
+
+	PanelTools.prototype = {
+		init: function() {
+			//绑定事件
+			_bindEvents(this);
+		},
+		destory: function() {
+
+		}
+	};
+
+	/**
+	 *
+	 * 创建实例,并防止重复创建
+	 *
+	 * @param options
+	 * @returns {*}
+	 */
+	$.fn.panelTools = function(options) {
+		/**
+		 *
+		 * @param pluginName 插件名称
+		 * @param $this 插件注册对象
+		 * @param options 插件参数
+		 * @param cb 回调函数,用于创建对象 一定要用return返回创建的插件对象
+		 * @returns {*}
+		 */
+		return $.pluginInit(pluginName, this, arguments, PanelTools, function($this) {
+			/**
+			 * 一定要返回创建的插件对象
+			 */
+			return new PanelTools($this, options);
+		});
+	};
+})(jQuery, window, document);
+
+
+/*
+	初始化
+*/
+;(function($, window, docuemnt, undefined) {
+
+		var title = $('.lui-panel').attr('title'),
+			options = $('.lui-panel').data('options');
+
+		if (title && title != '')$('.lui-panel').prepend('<div class="lui-panel-head">' + title + '</div>');
+
+		$('.wrap').css('opacity',1);  
+})(jQuery, window, document);
