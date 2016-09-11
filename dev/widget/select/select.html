@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="renderer" content="webkit">
 	<title>下拉框插件</title>
-	<link rel="stylesheet" type="text/css" href="../../common/css/common.css">
-	<script type="text/javascript" src='../../common/lib/js/jquery-3.1.0.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="./select.css">
+	<script type="text/javascript" src='../../common/lib/js/jquery.min.js'></script>
 	<script type="text/javascript" src='../code/select/select.js'></script>
 	<!-- 以上为固定形式，不可更改 -->
 </head>
@@ -18,14 +18,22 @@
 			<h1 style="font-size:50px">下拉框插件</h1><hr>
 		</div>
 		<!-- 树插件 -->
-		<select class='select' style="width: 500px;">
+		<select class='select' style="width: 200px;display: inline-block">
 			<option>第一项</option>
 			<option>第二项</option>
 			<option>第三项</option>
 		</select>
 	</div>
 	<script type="text/javascript">
-			$('.select').select()
+			$('.select').select({
+				url: '/Lui/widget/select/select.json',
+				success: function(json){
+					// console.log(json.responseText)
+				},
+				fail: function(err){
+					// console.log(err)
+				}
+			})
 	</script>
 </body>
 </html>
